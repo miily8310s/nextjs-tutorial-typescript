@@ -1,12 +1,6 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-
-export const Home = (): JSX.Element => (
+export const About = (): JSX.Element => (
   <div>
-    <Navbar />
-    <h1>Homepage</h1>
+    <h1>About</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
       impedit suscipit architecto, odio inventore nostrum non neque dicta. Quam
@@ -19,8 +13,7 @@ export const Home = (): JSX.Element => (
       magni accusantium culpa distinctio tempore iure accusamus, dolorem nobis
       odit.
     </p>
-    <Footer />
   </div>
 )
 
-export default Home
+export default About

@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Link from 'next/link'
 import styles from '../../styles/Favs.module.css'
 
 interface Book {
@@ -23,11 +24,11 @@ const Favs = ({ books }: { books: Book[] }): JSX.Element => {
     <div>
       <h1>All My Favs</h1>
       {books.map((book) => (
-        <div key={book.id}>
+        <Link href={'/favs/' + book.id} key={book.id}>
           <a className={styles.book}>
             <h3>{book.volumeInfo.title}</h3>
           </a>
-        </div>
+        </Link>
       ))}
     </div>
   )

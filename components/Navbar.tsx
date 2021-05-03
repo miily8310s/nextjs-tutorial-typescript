@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = (): JSX.Element => {
   return (
     <nav>
       <div className="logo">
-        <h1>My List</h1>
+        <Image src="/logo.png" alt="site logo" width={256} height={200} />
       </div>
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>

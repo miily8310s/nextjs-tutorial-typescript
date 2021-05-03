@@ -5,7 +5,7 @@ const Navbar = (): JSX.Element => {
   return (
     <nav>
       <div className="logo">
-        <Image src="/logo.png" alt="site logo" width={256} height={200} />
+        <Image src="/logo.png" alt="site logo" width={100} height={100} />
       </div>
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>

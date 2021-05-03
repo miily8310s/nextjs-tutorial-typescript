@@ -1,10 +1,11 @@
 // import Head from 'next/head'
 // import Image from 'next/image'
 import Link from 'next/link'
+import styles from '../styles/Home.module.css'
 
 export const Home = (): JSX.Element => (
   <div>
-    <h1>Homepage</h1>
+    <h1 className={styles.title}>Homepage</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
       impedit suscipit architecto, odio inventore nostrum non neque dicta. Quam
@@ -18,7 +19,7 @@ export const Home = (): JSX.Element => (
       odit.
     </p>
     <Link href="/favs">
-      <a>See My Favorites List</a>
+      <a className={styles.btn}>See My Favorites List</a>
     </Link>
   </div>
 )

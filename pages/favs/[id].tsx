@@ -1,13 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import { Book } from '../../entities'
-
-// interface Book {
-// id: number
-// volumeInfo: {
-// title: string
-// }
-// }
+import styles from '../../styles/Favs.module.css'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(
@@ -38,11 +32,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 const Detail = ({ book }: { book: Book }): JSX.Element => (
-  <div>
-    <h1>{book.volumeInfo.title}</h1>
-    <h1>{book.volumeInfo.authors}</h1>
-    <h1>{book.volumeInfo.publisher}</h1>
-    <h1>{book.volumeInfo.publishedDate}</h1>
+  <div className={styles.book}>
+    <div className={styles.book_detail}>
+      <h1>{book.volumeInfo.title}</h1>
+      <div className={styles.book_detail_publish}>
+        <p>{book.volumeInfo.authors}</p>
+        <p>{book.volumeInfo.publisher}</p>
+        <p>{book.volumeInfo.publishedDate}</p>
+      </div>
+    </div>
     <Image
       src={book.volumeInfo.imageLinks.thumbnail}
       width={200}

@@ -25,7 +25,7 @@ const Favs = ({ books }: { books: Book[] }): JSX.Element => {
       <h1>All My Favs</h1>
       {books.map((book) => (
         <Link href={'/favs/' + book.id} key={book.id}>
-          <a className={styles.book}>
+          <a className={styles.books}>
             <h3>{book.volumeInfo.title}</h3>
           </a>
         </Link>

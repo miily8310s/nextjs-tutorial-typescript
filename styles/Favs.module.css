@@ -1,9 +1,25 @@
-.book {
+.books {
   margin: 20px 10px;
   padding: 2px 20px;
   background: #fff;
   display: block;
 }
-.book:hover {
+.books:hover {
   border-left: 4px solid #4979ff;
+}
+
+.book {
+  display: flex;
+  justify-content: space-evenly;
+}
+.book_detail {
+  display: flex;
+  flex-direction: column;
+}
+.book_detail_publish {
+  display: flex;
+  flex-direction: row;
+}
+.book_detail_publish p {
+  margin-right: 1rem;
 }

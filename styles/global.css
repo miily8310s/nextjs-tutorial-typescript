@@ -37,3 +37,10 @@ footer {
   text-align: center;
   border-bottom: 1px solid #eaeaea;
 }
+.not-found {
+  text-align: center;
+}
+.not-found a {
+  color: #4979ff;
+  text-decoration: underline;
+}

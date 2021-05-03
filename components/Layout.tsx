@@ -1,13 +1,13 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-const Layout: React.FunctionComponent = (props) => {
+const Layout: React.FC = (props) => {
   return (
-    <div>
+    <>
       <Navbar />
       {props.children}
       <Footer />
-    </div>
+    </>
   )
 }
 

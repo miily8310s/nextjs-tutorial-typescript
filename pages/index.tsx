@@ -1,5 +1,6 @@
 // import Head from 'next/head'
 // import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -19,6 +20,9 @@ export const Home = (): JSX.Element => (
       magni accusantium culpa distinctio tempore iure accusamus, dolorem nobis
       odit.
     </p>
+    <Link href="/favs">
+      <a>See My Favorites List</a>
+    </Link>
     <Footer />
   </div>
 )

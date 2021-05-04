@@ -26,6 +26,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch('https://www.googleapis.com/books/v1/volumes/' + id)
   const data = await res.json()
 
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: { book: data },
   }
@@ -42,7 +48,11 @@ const Detail = ({ book }: { book: Book }): JSX.Element => (
       </div>
     </div>
     <Image
-      src={book.volumeInfo.imageLinks.thumbnail}
+      src={
+        book.volumeInfo.imageLinks.thumbnail
+          ? book.volumeInfo.imageLinks.thumbnail
+          : ''
+      }
       width={200}
       height={270}
     ></Image>

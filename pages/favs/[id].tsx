@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Book } from '../../entities'
 import styles from '../../styles/Favs.module.css'
 
@@ -47,7 +47,7 @@ const Detail = ({ book }: { book: Book }): JSX.Element => (
         <p>{book.volumeInfo.publishedDate}</p>
       </div>
     </div>
-    <Image
+    {/* <Image
       src={
         book.volumeInfo.imageLinks.thumbnail
           ? book.volumeInfo.imageLinks.thumbnail
@@ -55,7 +55,7 @@ const Detail = ({ book }: { book: Book }): JSX.Element => (
       }
       width={200}
       height={270}
-    ></Image>
+    ></Image> */}
   </div>
 )
 
